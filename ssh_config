@@ -1,0 +1,128 @@
+Host art01
+    Hostname     	artifacts01.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host builds101
+    Hostname     	builds101.dc1.prod.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host burn 
+    Hostname     	burn.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host contnrd 
+    Hostname     	content.nrd.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host confl 
+    Hostname     	confluence100.dc1.prod.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host confldr 
+    Hostname     	confluence200.dc2.prod.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host cnflstg 
+    Hostname     	confluencedev100.dc1.test.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host crowd 
+    Hostname     	crowd100.dc1.prod.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host ds
+    Hostname     	depotsearch.netflix.com
+    User         	depotsearch
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host ds100
+    Hostname     	depotsearch100.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host fish
+    Hostname     	fisheye01.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	yes
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host fish2
+    Hostname     	fisheye02.dc1.prod.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	yes
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host huds
+    Hostname     	hudson01.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host hud2
+    Hostname     	hudson02.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host jira
+    Hostname     	jira.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host opops
+    Hostname     	optimalops.net
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host p4
+    Hostname     	perforce100.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+    PermitLocalCommand  yes
+    LocalCommand        . ~/.bash_profile
+Host pdev
+    Hostname     	portaldev101
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host spang
+    Hostname     	spanglish3.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host td
+    Hostname     	testdashboard100.netflix.com
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+Host upcoming
+    Hostname     	10.2.245.82
+    User         	gbowles
+    TcpKeepAlive 	no
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
