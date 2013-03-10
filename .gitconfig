@@ -1,0 +1,23 @@
+[user]
+	name = Gareth Bowles
+	email = gareth@optimalops.net
+[core]
+	excludesfile = /Users/gbowles/.gitignore_global
+	autocrlf = false
+	safecrlf = true
+[http]
+        postBuffer = 300000000
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
