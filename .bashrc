@@ -87,6 +87,7 @@ alias jcli="java -jar ~/Tools/Jenkins-master/jenkins-cli.jar -i ~/Tools/Jenkins-
 alias j="autojump"
 alias jenk="ssh huds"
 alias ll="ls -lh"
+alias lla="ls -lha"
 alias mci="mvn clean install"
 alias mon="ssh monitors"
 alias ogcli="~/Tools/Depotsearch-cli/bin/opengrok-cli --server http://depotsearch.netflix.com/source"
