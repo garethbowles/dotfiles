@@ -1,12 +1,16 @@
 export ANT_HOME=/Users/gbowles/Projects/stash/ENGTOOLS/jenkins-slave-tools/apache-ant-1.8.2
 export ANT_OPTS=-Xmx2g
 export DATE=`date "+%m-%d-%Y"`
-export DSL_HOME=/Users/gbowles/Git/job-dsl-plugin/
+export DOCKER_CERT_PATH=/Users/gbowles/.boot2docker/certs/boot2docker-vm
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_TLS_VERIFY=1
+export DSL_HOME=/Users/gbowles/Projects/github/job-dsl-plugin/
 export EDITOR=vim
+export GO_HOME=/usr/local/go
 export GRADLE_HOME=/usr/local/gradle-latest
 export GROOVY_HOME=/usr/local/share/groovy-latest
 export HISTFILESIZE=10000
-export JAVA_OPTS="-XX:MaxPermSize=256M -Xmx1g"
+export JAVA_OPTS="-Xmx1g"
 export DSL_JAR=$(find /Users/gbowles/Projects/github/job-dsl-plugin/job-dsl-core -name '*standalone.jar'|tail -1)
 export M2_HOME=/usr/local/apache-maven-2.2.1
 export MAVEN_HOME=/usr/local/apache-maven-2.2.1
@@ -15,7 +19,7 @@ export SCALA_HOME=/usr/local/scala
 export P4CLIENT=gbowles_lglt-gbowles
 export TOOLS=~/Projects/stash/NEBULA
 export WORKSPACE=/Users/gbowles/Projects/perforce/depot
-export PATH=/usr/local/bin:$MYSQL_HOME/bin:$GRADLE_HOME/bin:$GROOVY_HOME/bin:$ANT_HOME/bin:$MAVEN_HOME/bin:$SCALA_HOME/bin::$WORKSPACE/depot/Tools/build:$TOOLS/wrapper:$PATH
+export PATH=/usr/local/bin:$MYSQL_HOME/bin:$GRADLE_HOME/bin:$GROOVY_HOME/bin:$ANT_HOME/bin:$MAVEN_HOME/bin:$SCALA_HOME/bin:$GO_HOME/bin:$WORKSPACE/depot/Tools/build:$TOOLS/wrapper:$PATH
 export PS1="\h:\W \u\$ "
 
 alias ..1="cd .."
@@ -27,9 +31,17 @@ alias awsp="ssh awsprod.netflix.com"
 alias awst="ssh aws.test.netflix.net"
 alias bu101="ssh builds101"
 alias bn="ssh buildnode$1"
+alias cis="cd Projects/stash/CISYS/"
 alias du1="du -h -d 1"
 alias flushdns="sudo discoveryutil udnsflushcaches"
+alias groups='groups | tr " " "\n"'
 alias hgrep="history | grep"
+
+# Docker
+alias b2dd="boot2docker down"
+alias b2du="boot2docker up"
+alias dps="docker ps"
+alias dr=" docker run"
 
 # Gradle
 alias g="gradle"
@@ -52,8 +64,9 @@ alias glf='git fetch; git reset --hard origin/master'  # Fetch latest ignoring l
 alias gfu='git fetch upstream'
 alias git-pending-diffs='git diff origin/master..HEAD'
 alias git-pending-commits='git log origin/master..HEAD'
+alias git-sync-fork="git fetch upstream; git checkout master; git merge origin/master"
 alias gits='alias | grep git'
-alias go='git checkout '
+alias gco='git checkout '
 alias gplom="git pull origin master"
 alias gpo="git push origin"
 alias gpoc="git push origin "$(git rev-parse --abbrev-ref HEAD)
@@ -83,11 +96,12 @@ alias p4s="~/p4submit.sh"
 
 #alias java6="export JAVA_HOME=`/usr/libexec/java_home -v 1.6`"
 alias java7="export JAVA_HOME=`/usr/libexec/java_home -v 1.7`"
+alias java8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`"
 alias jcli="java -jar ~/Tools/Jenkins-master/jenkins-cli.jar -i ~/Tools/Jenkins-master/id_rsa"
 alias j="autojump"
 alias jenk="ssh huds"
-alias ll="ls -lh"
 alias lla="ls -lha"
+alias ll="ls -lh"
 alias mci="mvn clean install"
 alias mon="ssh monitors"
 alias ogcli="~/Tools/Depotsearch-cli/bin/opengrok-cli --server http://depotsearch.netflix.com/source"

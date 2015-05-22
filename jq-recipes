@@ -1,0 +1,2 @@
+# Get all clusters for the jenkins app, via Spinnaker
+curl -s "http://spinnaker-api.prod.netflix.net/search?q=jenkins&type=clusters" | jq '.[] | .results[] | select(.application == "jenkins")' 
