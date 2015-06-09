@@ -1,5 +1,3 @@
-export ANT_HOME=/Users/gbowles/Projects/stash/ENGTOOLS/jenkins-slave-tools/apache-ant-1.8.2
-export ANT_OPTS=-Xmx2g
 export DATE=`date "+%m-%d-%Y"`
 export DOCKER_CERT_PATH=/Users/gbowles/.boot2docker/certs/boot2docker-vm
 export DOCKER_HOST=tcp://192.168.59.103:2376
@@ -11,7 +9,7 @@ export GRADLE_HOME=/usr/local/gradle-latest
 export GROOVY_HOME=/usr/local/share/groovy-latest
 export HISTFILESIZE=10000
 export JAVA_OPTS="-Xmx1g"
-export DSL_JAR=$(find /Users/gbowles/Projects/github/job-dsl-plugin/job-dsl-core -name '*standalone.jar'|tail -1)
+#export DSL_JAR=$(find /Users/gbowles/Projects/github/job-dsl-plugin/job-dsl-core -name '*standalone.jar'|tail -1)
 export M2_HOME=/usr/local/apache-maven-2.2.1
 export MAVEN_HOME=/usr/local/apache-maven-2.2.1
 export MYSQL_HOME=/usr/local/mysql
@@ -26,11 +24,6 @@ alias ..1="cd .."
 alias ..2="cd ../.."
 alias ..3="cd ../../.."
 alias ..4="cd ../../../.."
-alias _ant="ant -Dsonar.disabled=true"
-alias awsp="ssh awsprod.netflix.com"
-alias awst="ssh aws.test.netflix.net"
-alias bu101="ssh builds101"
-alias bn="ssh buildnode$1"
 alias cis="cd Projects/stash/CISYS/"
 alias du1="du -h -d 1"
 alias flushdns="sudo discoveryutil udnsflushcaches"
@@ -69,7 +62,7 @@ alias gits='alias | grep git'
 alias gco='git checkout '
 alias gplom="git pull origin master"
 alias gpo="git push origin"
-alias gpoc="git push origin "$(git rev-parse --abbrev-ref HEAD)
+#alias gpoc="git push origin $(git rev-parse --abbrev-ref HEAD)"
 alias gpom="git push origin master"
 alias gpos="git push origin stable"
 alias gpou="git push origin unstable"
@@ -94,8 +87,7 @@ alias p4e="p4 edit"
 alias p4l="p4 login"
 alias p4s="~/p4submit.sh"
 
-#alias java6="export JAVA_HOME=`/usr/libexec/java_home -v 1.6`"
-alias java7="export JAVA_HOME=`/usr/libexec/java_home -v 1.7`"
+alias java6="export JAVA_HOME=`/usr/libexec/java_home -v 1.6`"
 alias java8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`"
 alias jcli="java -jar ~/Tools/Jenkins-master/jenkins-cli.jar -i ~/Tools/Jenkins-master/id_rsa"
 alias j="autojump"
@@ -122,6 +114,9 @@ alias vu='vagrant up'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
+# Default to Java 8
+java8
+
 # gitprompt configuration
 
 # Set config variables first
@@ -131,4 +126,4 @@ GIT_PROMPT_ONLY_IN_REPO=1
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # as last entry source the gitprompt script
-source ~/Projects/github/bash-git-prompt/gitprompt.sh
+source ~/projects/github/bash-git-prompt/gitprompt.sh
