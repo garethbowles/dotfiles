@@ -1,3 +1,9 @@
+# Read shell functions
+if [ -f ~/.bash_functions ]; then
+  . ~/.bash_functions
+fi
+
+export AWS_PROFILE=unknown_bar-admin
 export DATE=`date "+%m-%d-%Y"`
 export EDITOR=vim
 export GO_HOME=/usr/local/go
@@ -6,9 +12,9 @@ export HISTFILESIZE=10000
 export JAVA_OPTS="-Xmx1g"
 export MYSQL_HOME=/usr/local/mysql
 export WORKSPACE=/Users/gbowles/Projects/perforce/depot
-export P4PORT=ssl:localhost:1666
-export PATH=/usr/bin:/usr/local/bin:$MYSQL_HOME/bin:$GRADLE_HOME/bin:$GROOVY_HOME/bin:$ANT_HOME/bin:$MAVEN_HOME/bin:$SCALA_HOME/bin:$GO_HOME/bin:$WORKSPACE/depot/Tools/build:$TOOLS/wrapper
-export PS1="\h:\W \u\$ "
+export P4PORT=perforce.roku:1666
+export PATH=~/bin:/sbin:/usr/bin:/usr/local/bin:$MYSQL_HOME/bin:$GRADLE_HOME/bin:$GROOVY_HOME/bin:$ANT_HOME/bin:$MAVEN_HOME/bin:$SCALA_HOME/bin:$GO_HOME/bin:$WORKSPACE/depot/Tools/build:$TOOLS/wrapper
+export PS1="gbowles-macbook:\W \u\$ "
 
 alias ..1="cd .."
 alias ..2="cd ../.."
@@ -21,9 +27,12 @@ alias groups='groups | tr " " "\n"'
 alias hgrep="history | grep"
 
 # Docker
+alias de="docker exec -ti"
 alias di="docker images"
-alias dps="docker ps"
+alias dps="docker ps --all" 
 alias dr=" docker run"
+alias drm=" docker rm"
+alias ds=" docker stop"
 
 # Gradle
 alias g="gradle"
@@ -57,7 +66,6 @@ alias gpom="git push origin master"
 alias gpos="git push origin stable"
 alias gpou="git push origin unstable"
 alias gr="git remote -v"
-alias gradlew='$WORKSPACE/depot/Tools/build.beta/gradlew'
 alias grom='git rebase origin/master'
 alias grum='git rebase upstream/master'
 alias gk='gitk --all&'
@@ -71,7 +79,6 @@ alias addp4dir="find . -type f -print | p4 -x - add"
 alias gows="export WORKSPACE=~/Users/gbowles/Projects/perforce; export P4CLIENT=gbowles_lgml-gbowles1; cd /Users/gbowles/Projects/perforce"
 alias gowsbb="export WORKSPACE=~/Perforce/perforce_1666/gbowles_lgmac-test-cbf/depot; export P4CLIENT=gbowles_lgmac-test-cbf; cd /Users/gbowles/Perforce/perforce_1666/gbowles_lgmac-test-cbf"
 alias goudf="cd /Users/gbowles/Projects/perforce/depot/pd/xf/oq/cloud/apps/aws/udf/custom.d"
-alias p2c="~/post2crucible.sh"
 alias p4c="p4 change"
 alias p4e="p4 edit"
 alias p4l="p4 login"
@@ -85,7 +92,8 @@ alias ll="ls -lh"
 alias mci="mvn clean install"
 alias mon="ssh monitors"
 alias ogcli="~/Tools/Depotsearch-cli/bin/opengrok-cli --server http://depotsearch.netflix.com/source"
-alias p="ping google.com"
+alias p="ping roku.com"
+alias p1="ping -c 1"
 alias psgrep="ps -ef | grep"
 alias rebash=". ~/.bash_profile"
 alias startmail="sudo launchctl start org.postfix.master"
